@@ -1,0 +1,10 @@
+{% extends 'battery/base.html' %}
+
+{% block content %}
+    <h2>Criar Novo Processo</h2>
+    <form method="post">
+        {% csrf_token %}  {# Importante para segurança #}
+        {{ form.as_p }}  {# Renderiza o formulário #}
+        <button type="submit">Criar</button>
+    </form>
+{% endblock %}

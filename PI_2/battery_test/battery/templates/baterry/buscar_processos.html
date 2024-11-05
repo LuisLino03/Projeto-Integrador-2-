@@ -1,0 +1,19 @@
+{% extends 'battery/base.html' %}
+
+{% block content %}
+    <h2>Buscar Processo</h2>
+    <form method="get">
+        <input type="text" name="termo_busca" placeholder="Buscar por número">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if processos %}
+        <ul>
+            {% for processo in processos %}
+                <li><a href="{% url 'detalhes_processo' processo.id %}">{{ processo.numero }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum processo encontrado.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'battery/base.html' %}
+
+{% block content %}
+    <h2>Bem-vindo ao Sistema de Teste de Baterias</h2>
+
+    {% if user.is_authenticated %}
+        <p>Olá, {{ user.username }}!</p>
+        <p>Selecione uma opção no menu acima para começar.</p>
+    {% else %}
+        <p>Faça login para acessar as funcionalidades.</p>
+    {% endif %}
+{% endblock %}
