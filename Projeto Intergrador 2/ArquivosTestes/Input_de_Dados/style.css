@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+    margin-top: 50px;
+    font-family: Helvetica; 
+}
+.container{
+
+    border: 2px solid #9b9797;
+    border-radius: 10px;
+}
+header{
+    background-color: #9b9797;
+    padding: 3px;
+    text-align: center;
+    color: #fff;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.caixa{
+    padding-top: 10px;
+    font-size: 17px;
+
+}
+.tabela{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 25px;
+    margin-right: 30px;
+}
+th,td{
+    width: 150px;
+    text-align: center;
+    font-weight: normal;
+    height: 40px;
+}
+.tabela input{
+    width: 80px;
+    height: 25px;
+    border-radius: 8px;
+    border: 1px solid #9b9797;
+    box-shadow: 3px 3px 10px #a7a6a6;
+    font-size: 15px;
+    text-align: center;
+}
+input:focus{
+    outline: none ;
+}
+.botoes{
+    display: flex;
+    padding: 10px;
+    justify-content: end;
+    margin-right: 55px;
+    margin-top: 30px;
+    display: flex;
+
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    width: 93px;
+    height: 24px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: #8b8a8a 2px solid;
+    box-shadow: 3px 3px 10px #a7a6a6;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+}
+#btnCancelar{
+    background-color: #db4e4e;
+}
+#btnSalvar{
+    background-color: #4b8ee6;
+}
+.btn:hover{
+    transform: scale(1.08);
+    transition: .3s;
+}
+#btnCancelar:hover{
+    background-color: #e93636;
+}
+#btnSalvar:hover{
+    background-color: #2d7adf;
+ }
