@@ -1,0 +1,94 @@
+body{ 
+    font-family: Helvetica; 
+    background-color: #0f0c25;
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    color: rgb(243, 136, 36);
+}
+.container{
+    margin-top: 100px;
+}
+.container img {
+    width: 160px;
+}
+#login {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+}
+h1 {
+    color: #f1ebeb;
+}
+.usuario input{
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #1e1c2e;
+    color: #d3cdcd;
+}
+.senha input{
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #1e1c2e;
+    color: #d3cdcd;
+    margin-top: 17px;
+}
+input::placeholder{
+    color: #d3cdcd;
+}
+input:focus{
+    outline: none ;
+}
+.acessar input{
+    border-radius: 20px;
+    border: none;
+    width: 120px;
+    height: 40px;
+    background-color: #6add73;
+    color: #0a0a0a;
+    cursor: pointer;
+    margin-top: 25px;
+    font-weight: bold;
+}
+.acessar input:hover{
+    background-color: #4cda58;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+    display: none;
+  }
+  
+  .error-message.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+  }
+  
+  /* Animação de "vibração" ao erro */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .error-message.shake {
+    animation: shake 0.5s ease;
+  }

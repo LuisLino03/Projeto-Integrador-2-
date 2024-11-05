@@ -1,0 +1,52 @@
+{% extends 'battery/base.html' %}
+
+{% block content %}
+    <h2>Detalhes do Processo {{ processo.numero }}</h2>
+
+    <p>Classificação: {{ processo.classificacao }}</p>
+    <p>Data de Início: {{ processo.data_inicio }}</p>
+    <p>Status: {{ processo.status }}</p>
+
+    <h3>Baterias</h3>
+    <ul>
+        {% for bateria in baterias %}
+            <li>
+                {{ bateria.numero_serie }} - 
+                <a href="{% url 'inserir_dados' bateria.id %}">Inserir Dados</a>
+            </li>
+        {% endfor %}
+        <li><a href="{% url 'criar_bateria' processo.id %}">Criar Nova Bateria</a></li>
+
+
+    </ul>
+
+
+    <h3>Dados Coletados</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Bateria</th>
+                <th>Capacidade</th>
+                <th>Ciclo</th>
+                <th>Voltagem</th>
+                <th>Corrente</th>
+                <th>Data Coleta</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dado in dados_coletados %}
+                <tr>
+                    <td>{{ dado.bateria.numero_serie }}</td>
+                    <td>{{ dado.capacidade }}</td>
+                    <td>{{ dado.ciclo }}</td>
+                    <td>{{ dado.voltagem }}</td>
+                    <td>{{ dado.corrente }}</td>
+                    <td>{{ dado.data_coleta }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'exportar_dados' processo.id %}">Exportar Dados</a>
+
+{% endblock %}

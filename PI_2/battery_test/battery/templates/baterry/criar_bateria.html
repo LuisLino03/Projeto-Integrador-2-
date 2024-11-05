@@ -1,0 +1,10 @@
+{% extends 'battery/base.html' %}
+
+{% block content %}
+    <h2>Criar Nova Bateria para o Processo {{ processo.numero }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Criar Bateria</button>
+    </form>
+{% endblock %}
