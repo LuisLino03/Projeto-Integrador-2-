@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janela Modal</title>
+    <style>
+        /* Estilos para a janela modal */
+        .modal {
+            display: none; /* Esconde o modal por padrão */
+            position: fixed; 
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Janela Principal</h2>
+    <p id="result">O dado inserido aparecerá aqui.</p>
+    
+    <!-- Botão para abrir o modal -->
+    <button id="openModalBtn">Abrir Modal</button>
+
+    <!-- Janela Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Inserir Dado</h2>
+            <input type="text" id="modalInput" placeholder="Digite algo...">
+            <button id="submitBtn">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        // Referências aos elementos do DOM
+        const modal = document.getElementById("myModal");
+        const openModalBtn = document.getElementById("openModalBtn");
+        const closeBtn = document.querySelector(".close");
+        const submitBtn = document.getElementById("submitBtn");
+        const result = document.getElementById("result");
+        const modalInput = document.getElementById("modalInput");
+
+        // Função para abrir o modal
+        openModalBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Função para fechar o modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Função para capturar o valor do input e exibir na tela principal
+        submitBtn.onclick = function() {
+            const inputValue = modalInput.value;
+            result.textContent = "Você inseriu: " + inputValue;
+            modal.style.display = "none"; // Fecha o modal
+        }
+
+        // Fechar o modal ao clicar fora dele
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

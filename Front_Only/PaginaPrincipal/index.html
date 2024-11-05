@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="icon" href="arquivos/logo.png" type="image/png">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+<section class="tela">
+    <div class="lateral">
+        <div class="cadastroNovo">
+            <div id="texto">
+                <h1>Cadastrar novo processo</h1>
+            </div>
+            <!-- Botão de novo cadastro -->
+            <div id="cadastroNovoImg">
+                <img src="https://cdn-icons-png.flaticon.com/512/6048/6048657.png" alt="Adicionar processo" id="open-modal">
+            </div>
+        </div>
+
+        <div class="buscaProcesso">
+            <div class="search-container">
+                <!-- Input da barra de pesquisa -->
+                <input type="text" id="searchInput" placeholder="Digite sua pesquisa...">
+                <button onclick="search()" id="logoPesquisa"><img src="arquivos/lupa.png" alt="lupa de pesquisa"></button>
+            </div>
+        </div>
+        <div class="processoAndamento">
+            <div id="textAndamento">
+                <h1>Processos em andamento</h1>
+            </div>
+            <div class="tabelaAndamento">
+                <!-- Listas dos processos -->
+                <div class="processos"></div>
+                    <ul>
+                        <li><a href="">Processo XXXX XXXX 01</a></li>
+                        <li><a href="">Processo XXXX XXXX 02</a></li>
+                        <li><a href="">Processo XXXX XXXX 03</a></li>
+                        <li><a href="">Processo XXXX XXXX 04</a></li>
+                        <li><a href="">Processo XXXX XXXX 05</a></li>
+                        <li><a href="">Processo XXXX XXXX 06</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="principal">
+        <div class="principalSuperior">
+            <div class="caixaDados">
+                <div class="processoPrincipal">
+                    <!-- Nome do processo na tela principal (no quadro azul) -->
+                    <h1 id="nomeProcessoTela">Processo XXXX-XXXXXX-XX</h1>
+                </div>
+                <div class="processoLogado">
+                    <div class="infosProcesso">
+                        <ul class="listProcesso">
+                            <li>Tipo do processo:</li>
+                            <li>Inicio:</li>
+                            <li>Témino:</li>
+                            <li>Término do último item:</li>
+                            <li>Status:</li>
+                        </ul>
+                    </div>
+                    <!-- Lista das caracteristicas do processo -->
+                    <div class="respProcesso">
+                        <ul class="listProcesso">
+                            <li id="tipoProcessoTela">XXXXX</li>
+                            <li id="dataInicioTela">XXXXX</li>
+                            <li id="dataTerminoTela">XXXXX</li>
+                            <li id="dataUltimoItemTela">XXXXX</li>
+                            <li id="StatusTela">XXXXX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="anotaçoes">
+                <div class="anotaçoesSuperior">
+                    <div id="tituloAnotaçoes">
+                        <h1>Anotações</h1>
+                    </div>
+                    <!-- Botão do acionamento das anotações -->
+                    <div id="anotaçoesImg">
+                        <img src="https://cdn-icons-png.flaticon.com/512/241/241529.png" alt="icone de anotação">
+                    </div>
+                </div>
+                <div class="anotaçoesDigitadas">
+                    <ul>
+                        <li><a href="">Data: 25/09/2025, Hora: 20:35 - PONTOPONTOPONTO</a></li>
+                        <li><a href="">Data: 25/09/2025  Hora: 20:35 - BLABLABLABLABLA</a></li>
+                        <li><a href="">Data: 25/09/2025  Hora: 20:35 - PONTOPONTOPONTO</a></li>
+                        <li><a href="">Data: 25/09/2025  Hora: 20:35 - BLABLABLABLABLA</a></li>
+                        <li><a href="">Data: 25/09/2025  Hora: 20:35 - PONTOPONTOPONTO</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ultimoSuperior">
+                <div class="usuarioLogado">
+                    <!-- nome do usuario que esta ativo -->
+                    <div id="nameUser">
+                        Usuario    
+                    </div>
+                    <!-- botão de sair -->
+                    <div id="logout">
+                        <a href="../Login/login1.html"><img src="https://cdn0.iconfinder.com/data/icons/login-44/24/logout_doot_interface_essentials_login_regular_f-512.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- botão de confirmar -->
+                <div id="confirmar">
+                    <a href=""><img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes-3/3/36-512.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="risco">
+                
+        </div>
+        <div class="principalConteudo">
+                <div class="infosConteudo">
+                        <div class="botoesConteudo">
+                            <!-- botão de download do arquivo -->
+                                <div id="download">
+                                        <a href=""><img src="https://cdn-icons-png.flaticon.com/512/9205/9205302.png" alt=""></a>
+                                </div>
+                            <!-- botão para adicionar dados na tabela -->
+                                <div id="addDados">
+                                   <img src="https://cdn-icons-png.flaticon.com/512/2312/2312159.png" alt="" id="open-modalInput">
+                                </div>
+                        </div>
+
+                        <div class="moduloGeral1">
+                            <!-- Id dos modulos, esse eh o 1 -->
+                            <div class="idnovo">
+                                <h4>ID XXXXX</h4>
+                            </div>
+                            <div class="modulosnovo">
+                                <div class="infosModulonovo">
+                                    <ul class="listInfos">
+                                        <li>Total de ciclos: </li>
+                                        <li>Média de ciclos: </li>
+                                        <li>Última capacidade: </li>
+                                        <li>Analisador: </li>
+                                        <li>Slot: </li>
+                                        <li>Status: </li>
+                                    </ul>
+                                </div>
+                                <!-- Informações dos modulos a ser adicionada 1 -->
+                                <div class="respModulonovo">
+                                    <ul class="listInfos">
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="moduloGeral2">
+                            <!-- Id dos modulos, esse eh o 2 -->
+                            <div class="idnovo">
+                                <h4>ID XXXXX</h4>
+                            </div>
+                            <div class="modulosnovo">
+                                <div class="infosModulonovo">
+                                    <ul class="listInfos">
+                                        <li>Total de ciclos: </li>
+                                        <li>Média de ciclos: </li>
+                                        <li>Última capacidade: </li>
+                                        <li>Analisador: </li>
+                                        <li>Slot: </li>
+                                        <li>Status: </li>
+                                    </ul>
+                                </div>
+                                 <!-- Informações dos modulos a ser adicionada 2 -->
+                                <div class="respModulonovo">
+                                    <ul class="listInfos">
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="moduloGeral3">
+                            <!-- Id dos modulos, esse eh o 3 -->
+                            <div class="idnovo">
+                                <h4>ID XXXXX</h4>
+                            </div>
+                            <div class="modulosnovo">
+                                <div class="infosModulonovo">
+                                    <ul class="listInfos">
+                                        <li>Total de ciclos: </li>
+                                        <li>Média de ciclos: </li>
+                                        <li>Última capacidade: </li>
+                                        <li>Analisador: </li>
+                                        <li>Slot: </li>
+                                        <li>Status: </li>
+                                    </ul>
+                                </div>
+                                 <!-- Informações dos modulos a ser adicionada 3 -->
+                                <div class="respModulonovo">
+                                    <ul class="listInfos">
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="moduloGeral4">
+                            <!-- Id dos modulos, esse eh o 4 -->
+                            <div class="idnovo">
+                                <h4>ID XXXXX</h4>
+                            </div>
+                            <div class="modulosnovo">
+                                <div class="infosModulonovo">
+                                    <ul class="listInfos">
+                                        <li>Total de ciclos: </li>
+                                        <li>Média de ciclos: </li>
+                                        <li>Última capacidade: </li>
+                                        <li>Analisador: </li>
+                                        <li>Slot: </li>
+                                        <li>Status: </li>
+                                    </ul>
+                                </div>
+                                 <!-- Informações dos modulos a ser adicionada 4 -->
+                                <div class="respModulonovo">
+                                    <ul class="listInfos">
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                        <li>XXXXXX</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+            </div>
+                <div class="tabela">
+                     <!-- Tabela do Processo, TITULOS -->
+                    <table class="table1">
+                        <tr>
+                            <th class="menor">Editar</th>
+                            <th class="menor">ID_linha</th>
+                            <th class="data">Data de Coleta</th>
+                            <th class="md1">Capacidade</th>
+                            <th class="md1">Ciclo</th>
+                            <th class="md2">Capacidade</th>
+                            <th class="md2">Ciclo</th>
+                            <th class="md3">Capacidade</th>
+                            <th class="md3">Ciclo</th>
+                            <th class="md4">Capacidade</th>
+                            <th class="md4">Ciclo</th>
+                        </tr>
+                        <!-- Tabela do Processo, INFORMAÇÕES A SER RECEBIDAS -->
+                        <tr>
+                            <td class="menor"><img id="open-modalEditInput" src="https://cdn-icons-png.flaticon.com/512/3597/3597104.png" alt="editar"></td>
+                            <td class="menor">1</td>
+                            <td class="data">25/09/2024</td>
+                            <td class="md1">91</td>
+                            <td class="md1">156</td>
+                            <td class="md2">91</td>
+                            <td class="md2">156</td>
+                            <td class="md3">91</td>
+                            <td class="md3">156</td>
+                            <td class="md4">91</td>
+                            <td class="md4">156</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--PARTE DO MODAL DO NOVO CADASTRO-->
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div class="container">
+                <header id="modal-header">
+                    <h1>Informações do Processo</h1>
+                </header>
+                <div class="caixa" id="modal-body">
+                    <div class="infos">
+                        <div class="texto">
+                            <label id="tipoProcesso" for="opcoes">Tipo do processo:</label>
+                        </div>
+                        <!-- VALOR DO TIPO DO PROCESSO-->
+                        <select class="texto" name="opcoes">
+                            <option value="certificacao">Certificação</option>
+                            <option value="desenvolvimento">Desenvolvimento</option>
+                        </select>
+                    </div>
+                    <div class="infos">
+                        <div class="texto">
+                            Número do processo:
+                        </div>
+                        <!-- VALOR DO NÚMERO DO PROCESSO-->
+                        <div class="input">
+                            <input type="text" id="nomeProcesso">
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <div class="texto">
+                            Data de início:
+                        </div>
+                        <!-- VALOR DA DATA DE INICIO-->
+                        <div class="input">
+                            <input type="date" >
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <div class="texto">
+                            Data de término:
+                        </div>
+                        <!-- VALOR DA DATA DE TÉRMINO-->
+                        <div class="input">
+                            <input type="date" >
+                        </div>
+                        
+                    </div>
+                <div class="infos2">
+                    <div class="ID">
+                        <div class="text">
+                            ID
+                        </div>
+                        <!-- VALOR DO ID 1-->
+                        <div class="input" id="id1">
+                            <input type="text">
+                        </div>
+                         <!-- VALOR DO ID 2-->
+                        <div class="input" id="id2">
+                            <input type="text">
+                        </div>
+                         <!-- VALOR DO ID 3-->
+                        <div class="input" id="id3">
+                            <input type="text">
+                        </div>
+                         <!-- VALOR DO ID 4-->
+                        <div class="input" id="id4">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="analisador">
+                        <div class="text">
+                            Analisador
+                        </div>
+                         <!-- VALOR DO ANALISADOR 1-->
+                        <div class="input" id="analisador1">
+                            <input type="text">
+                        </div>
+                        <!-- VALOR DO ANALISADOR 2-->
+                        <div class="input" id="analisador2">
+                            <input type="text">
+                        </div>
+                        <!-- VALOR DO ANALISADOR 3-->
+                        <div class="input" id="analisador3">
+                            <input type="text">
+                        </div>
+                        <!-- VALOR DO ANALISADOR 4-->
+                        <div class="input" id="analisador4">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="slot">
+                        <div class="text">
+                            Slot
+                        </div>
+                        <!-- VALOR DO SLOT 1-->
+                        <div class="input" id="slot1">
+                            <input type="text">
+                        </div>
+                        <!-- VALOR DO SLOT 2-->
+                        <div class="input" id="slot2">
+                            <input type="text">
+                        </div>
+                        <!-- VALOR DO SLOT 3-->
+                        <div class="input" id="slot3">
+                            <input type="text">
+                        </div>
+                        <!-- VALOR DO SLOT 4-->
+                        <div class="input" id="slot4">
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="botoes">
+                     <!-- BOTÃO DE CANCELAR CADASTRO-->
+                    <a href="../PaginaPrincipal/index.html"><div class="btn" id="btnCancelar">Cancelar</div></a>
+                     <!-- BOTÃO DE SALVAR CADASTRO-->
+                    <a href="../PaginaPrincipal/index.html"><div class="btn" id="btnSalvar" onclick="salvarCadastro()">Salvar</div></a>
+                </div>
+            </div>
+        </div>
+
+
+         <!--PARTE DO MODAL DA ADIÇÃO DE INPUT-->
+         <div id="fadeInput" class="hideInput"></div>
+         <div id="modalInput" class="hideInput">
+            <div class="containerinput">
+                <header class="headerinput">
+                     <!--TITULO QUE INDICA O PROCESSO A SER TRABALHADO-->
+                    <h1>Processo XXXX-XXXXXX-XX</h1>
+                </header>
+                <div class="caixainput">
+                    <div class="infos">
+                        <div class="tabelainput">
+                             <!-- TITULOS DA TABELA-->
+                            <table class="table2">
+                                <tr>
+                                    <th></th>
+                                    <th>Analisador</th>
+                                    <th>Slot</th>
+                                    <th>Última capacidade</th>
+                                    <th>Último ciclo</th>
+                                    <th>Capacidade</th>
+                                    <th>Ciclo</th>
+                                </tr>
+                                 <!-- VALORES DA LINHA 1-->
+                                <tr>
+                                    <td>ID XXXXX</td>
+                                    <td>Teste</td>
+                                    <td>11</td>
+                                    <td>11</td>
+                                    <td>11</td>
+                                     <!-- INPUT DE CAPACIDADE 1-->
+                                    <td><input type="text"></td>
+                                     <!-- INPUT DE CICLO 1 -->
+                                    <td><input type="text"></td>
+                                </tr>
+                                <!-- VALORES DA LINHA 2-->
+                                <tr>
+                                    <td>ID XXXXX</td>
+                                    <td>Teste</td>
+                                    <td>12</td>
+                                    <td>12</td>
+                                    <td>12</td>
+                                    <!-- INPUT DE CAPACIDADE 2-->
+                                    <td><input type="text"></td>
+                                    <!-- INPUT DE CICLO 2 -->
+                                    <td><input type="text"></td>
+                                </tr>
+                                <!-- VALORES DA LINHA 3-->
+                                <tr>
+                                    <td>ID XXXXX</td>
+                                    <td>Teste</td>
+                                    <td>13</td>
+                                    <td>13</td>
+                                    <td>13</td>
+                                    <!-- INPUT DE CAPACIDADE 3-->
+                                    <td><input type="text"></td>
+                                    <!-- INPUT DE CICLO 3 -->
+                                    <td><input type="text"></td>
+                                </tr>
+                                <!-- VALORES DA LINHA 4-->
+                                <tr>
+                                    <td>ID XXXXX</td>
+                                    <td>Teste</td>
+                                    <td>14</td>
+                                    <td>14</td>
+                                    <td>14</td>
+                                    <!-- INPUT DE CAPACIDADE 4-->
+                                    <td><input type="text"></td>
+                                    <!-- INPUT DE CICLO 4 -->
+                                    <td><input type="text"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="botoesinput">
+                        <!-- BOTÃO PARA CANCELAR O INPUT DE DADOS-->
+                        <a href="../PaginaPrincipal/index.html"><div class="btn" id="btnCancelarInput">Cancelar</div></a>
+                        <!-- BOTÃO PARA SALVAR O INPUT DE DADOS-->
+                        <a href="../PaginaPrincipal/index.html"><div class="btn" id="btnSalvar">Salvar</div></a>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <!--PARTE DO MODAL DA ADIÇÃO DE INPUT-->
+         <div id="fadeEditInput" class="hideEditInput"></div>
+         <div id="modalEditInput" class="hideEditInput">
+            <div class="containerEditinput">
+                <header class="headerEditinput">
+                    <!--TITULO QUE INDICA O PROCESSO A SER TRABALHADO-->
+                    <h1>EDITANDO - Processo XXXX-XXXXXX-XX</h1>
+                </header>
+                <div class="caixaEditinput">
+                    <div class="infos">
+                        <div class="tabelaEditinput">
+                            <table class="table3">
+                                <tr>
+                                    <th></th>
+                                    <th>Analisador</th>
+                                    <th>Slot</th>
+                                    <th>Última capacidade</th>
+                                    <th>Último ciclo</th>
+                                    <th>Capacidade</th>
+                                    <th>Ciclo</th>
+                                </tr>
+                                <tr>
+                                    <td>ID XXXXX</td>
+                                    <td>Teste</td>
+                                    <td>11</td>
+                                    <td>11</td>
+                                    <td>11</td>
+                                    <!-- INPUT DE EDIÇÃO DE CAPACIDADE 1-->
+                                    <td><input type="text"></td>
+                                    <!-- INPUT DE EDIÇÃO DE CICLO 1-->
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>ID XXXXX</td>
+                                    <td>Teste</td>
+                                    <td>12</td>
+                                    <td>12</td>
+                                    <td>12</td>
+                                     <!-- INPUT DE EDIÇÃO DE CAPACIDADE 2-->
+                                    <td><input type="text"></td>
+                                    <!-- INPUT DE EDIÇÃO DE CICLO 2-->
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>ID XXXXX</td>
+                                    <td>Teste</td>
+                                    <td>13</td>
+                                    <td>13</td>
+                                    <td>13</td>
+                                     <!-- INPUT DE EDIÇÃO DE CAPACIDADE 3-->
+                                    <td><input type="text"></td>
+                                    <!-- INPUT DE EDIÇÃO DE CICLO 3-->
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>ID XXXXX</td>
+                                    <td>Teste</td>
+                                    <td>14</td>
+                                    <td>14</td>
+                                    <td>14</td>
+                                     <!-- INPUT DE EDIÇÃO DE CAPACIDADE 4-->
+                                    <td><input type="text"></td>
+                                    <!-- INPUT DE EDIÇÃO DE CICLO 4-->
+                                    <td><input type="text"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="botoesEditinput">
+                        <!-- BOTÃO PARA CANCELAR EDIÇÃO DO INPUT-->
+                        <a href="../PaginaPrincipal/index.html"><div class="btn" id="btnCancelarEditInput">Cancelar</div></a>
+                    <!-- BOTÃO PARA SALVAR EDIÇÃO DE INPUT -->
+                        <a href="../PaginaPrincipal/index.html"><div class="btn" id="btnSalvar">Salvar</div></a>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+</body>
+</html>

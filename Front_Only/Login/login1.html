@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./arquivos/logoAzul.png" type="image/png">
+    <title>Login do Sistema</title>
+    <link rel="stylesheet" href="login1.css">
+
+</head>
+<body>
+    <div id="login">
+
+            <div class="container">
+                <img src="arquivos/logoAmarelo.png" alt="Logo">
+                <h1>Login</h1>
+                    <form action="" method="post">
+                        <div class="usuario">
+                            <!-- INPUT DO NOME DE USUARIO-->
+                            <input type="text" placeholder="Usuário" id="usuario">
+                        </div>
+                        <div class="senha">
+                            <!-- INPUT DA SENHA DO USUARIO-->
+                            <input type="password" placeholder="Senha" id="senha">
+                        </div>
+                        <div id="error-message" class="error-message">
+                            Acesso negado. Tente novamente.
+                        </div>
+                        <div class="acessar">
+                            <input type="submit" value="Acessar" onclick="logar(); return false">
+                        </div>
+                    </form>
+            </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
